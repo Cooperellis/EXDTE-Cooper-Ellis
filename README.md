@@ -1,2 +1,2 @@
 # EXDTE-Cooper-Ellis
-File dump for EXDTE
+I am Cooper and this is a file dump for my year 11 class EXDTE.
