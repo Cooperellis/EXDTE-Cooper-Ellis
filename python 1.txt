@@ -1,4 +1,0 @@
->>> #variables are lowercase
->>> #CONSTANTS are upper case
->>> #variables can use numbers letters and underscores as long as the firt character is a letter
->>> #use reasonable names for the variables
