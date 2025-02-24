@@ -1,3 +1,5 @@
+import random
+
 keep_going = 'yes'
 #intro
 print("Welcome to Lucky Unicorn!")
@@ -29,43 +31,43 @@ while keep_going == 'yes':
     else:
         print(f"Betting with ${bet}")
 
-    #amount of each animal 
-    unicorn = 0
-    horse = 0
-    zebra = 0
-    donkey = 0
-
     #asks to type spin to bet and makes it lowercase
-    spin = input(f"Type spin to bet ${bet} ")
-    spin_1 = spin.lower
-
-    #choosesn random number for chance of animal
-    import random
+    input(f"Press Enter to bet ${bet} ")
+   
+    #chooses random number for animal
+    
     animal = random.randint(1, 100)
 
-    #chances for animal to happen and what happens to balance
+    #changes balance and prints it if unicorn is drawn
     if animal == 100:
         print("Unicorn! Congratulations you hit the jackpot!")
         int(bet) * int(5)
         addition = int(balance) + int(bet)
         print(f"Your balance is now ${addition}")
-    elif animal >= 99:
+    #changes balance and prints it if horse is drawn
+    elif animal <= 33:
         print("Horse! Better luck lext time.")
         int(bet) - int(2)
         subtract = int(balance) - int(bet)
         print(f"Your balance is now ${subtract}")
-    elif animal >= 66:
+    #changes balance and prints it if zebra is drawn
+    elif animal <= 66:
         print("Zebra! Better luck lext time.")
         int(bet) - int(2)
         subtract = int(balance) - int(bet)
         print(f"Your balance is now ${subtract}")
-    elif animal >= 33:
+    #changes balance and prints it if donkey is drawn
+    else: 
+        animal <= 99
         print("DONKEY! YOU LOSE!")
         subtract = int(balance) - int(bet)
         print(f"Your balance is now ${subtract}")
-
+    
+    if balance == 0:
+        keep_going = 'no'
+    else:
     #asks the user if they want to continue
-    keepgoing = input("Would you like to continue? ")
+        keepgoing = input("Would you like to continue? ")
     keep_going = keepgoing.lower()
     if keep_going == 'yes':
         print("lets continue.")
